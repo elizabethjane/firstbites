@@ -1,27 +1,152 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>First Bites support</title><link rel="stylesheet" href="style.css"></head><body>
-<header><h1>First Bites</h1><p>Track your baby's first foods, gently.</p><nav><a href="index.html">Support</a><a href="privacy.html">Privacy</a></nav></header>
-<main>
-<p>First Bites helps families log solid foods, introduce allergens in an organized way, keep an eye on iron, and find meal ideas, without pressure.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First Bites</title>
+<meta name="description" content="A gentle iPhone app for starting solids: log meals in seconds, introduce allergens one at a time, keep an eye on iron, and get real meal ideas.">
+<meta property="og:title" content="First Bites: starting solids, without the spreadsheet">
+<meta property="og:description" content="Log meals in seconds, introduce allergens one at a time, keep an eye on iron, and get real meal ideas. Free for iPhone.">
+<meta property="og:image" content="https://elizabethjane.github.io/firstbites/img/1-today.jpg">
+<link rel="icon" href="img/icon.png">
+<style>
+:root{--navy:#2F5E93;--deep:#1F4470;--tint:#E6EDF6;--text:#1c1c1e;--muted:#5f6670;--bg:#fff;--card:#f5f7fa;--line:#e3e7ed}
+@media (prefers-color-scheme:dark){:root{--text:#f2f2f7;--muted:#a3a9b2;--bg:#111317;--card:#1a1e24;--tint:#1c2733;--line:#2a3039}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:var(--navy)}@media (prefers-color-scheme:dark){a{color:#8fb3dd}}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.hero{background:linear-gradient(160deg,#2F5E93,#1F4470);color:#fff;padding:56px 0 0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:20px}
+.brand img{width:44px;height:44px;border-radius:11px}
+.hero h1{font-size:44px;line-height:1.1;margin:28px 0 14px;letter-spacing:-.5px}
+.hero p.lede{font-size:19px;color:#dbe6f3;margin:0 0 26px;max-width:32em}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:56px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:600;text-decoration:none;font-size:16px}
+.btn.store{background:#fff;color:var(--deep)}
+.btn.store[aria-disabled=true]{cursor:default}
+.btn.ghost{color:#fff;border:1.5px solid rgba(255,255,255,.55)}
+.phone{width:100%;max-width:340px;justify-self:center;border-radius:36px 36px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.25);display:block}
+section{padding:64px 0}
+h2{font-size:30px;line-height:1.2;margin:0 0 10px;letter-spacing:-.3px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:40em}
+.note{background:var(--tint);border-radius:18px;padding:26px 28px;max-width:760px}
+.note p{margin:0 0 10px}.note p:last-child{margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.shots{display:flex;gap:18px;overflow-x:auto;padding:4px 2px 18px;scroll-snap-type:x mandatory}
+.shots figure{margin:0;flex:0 0 220px;scroll-snap-align:start}
+.shots img{width:100%;border-radius:22px;border:1px solid var(--line);display:block}
+.shots figcaption{font-size:14px;color:var(--muted);text-align:center;margin-top:8px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{margin:8px 0 0;color:var(--muted)}
+.signup{text-align:center;background:var(--card);border-top:1px solid var(--line)}
+.signup .btn.store{background:var(--navy);color:#fff}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+  .phone{max-width:260px}
+  .cta{margin-bottom:36px}
+  section{padding:48px 0}
+}
+</style>
+</head>
+<body>
 
-<h2>Contact</h2>
-<p class="note">Questions, bugs or ideas: email <a href="mailto:SUPPORT_EMAIL">SUPPORT_EMAIL</a>. We usually reply within a few days.</p>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><img src="img/icon.png" alt="">First Bites</div>
+      <h1>Starting solids, without the spreadsheet.</h1>
+      <p class="lede">A free iPhone app that keeps track of what your baby's eaten, which allergens are next, and roughly how much iron they got today. It also gives you actual meal ideas when you're out of them.</p>
+      <div class="cta">
+        <a class="btn store" aria-disabled="true">Coming soon to the App Store</a>
+        <a class="btn ghost" href="mailto:app.firstbites@gmail.com?subject=Tell%20me%20when%20First%20Bites%20is%20live">Email me when it's out</a>
+      </div>
+    </div>
+    <img class="phone" src="img/1-today.jpg" alt="The Today screen in First Bites, showing breakfast logged and lunch ideas">
+  </div>
+</header>
 
-<h2>Sharing with a partner or caregiver</h2>
-<p>Open <b>Settings → Family → Invite</b> and send the invite by Messages or Mail. When they open it on their iPhone, your family's children appear in their app and everyone can log meals. Both people need to be signed in to iCloud.</p>
+<section>
+  <div class="wrap">
+    <div class="note">
+      <p><strong>Why I made this.</strong> When my baby started solids, I had a notes app for allergens, a spreadsheet for iron, a group chat full of screenshots, and no idea what to make for lunch. So I built the app I wanted.</p>
+      <p>It's meant to be calm. No streaks, no red warnings, no guilt if a meal was three bites of banana. Just a clear picture of the week.</p>
+    </div>
+  </div>
+</section>
 
-<h2>My data isn't showing up on another phone</h2>
-<p>Make sure both phones are signed in to iCloud, that iCloud is allowed for First Bites (iOS Settings → your name → iCloud), and that both have a network connection. Changes usually sync within a minute.</p>
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>What it does</h2>
+    <p class="sub">Everything in one place, built around how feeding a baby actually goes.</p>
+    <div class="grid">
+      <div class="card"><h3>Log a meal in seconds</h3><p>Tap what they ate and whether it was a little, medium or a lot. Forgot yesterday's dinner? Flip back a day and fill it in.</p></div>
+      <div class="card"><h3>Allergens, one at a time</h3><p>A clear schedule for the nine common allergens, with each tree nut on its own day. Once something's in, it reminds you to keep it in the rotation.</p></div>
+      <div class="card"><h3>Iron, without the stress</h3><p>A rough daily iron total with a gentle target that adjusts for breast milk, formula or both. Vitamin C pairing and liver limits are handled quietly in the background.</p></div>
+      <div class="card"><h3>Meal ideas that feel like meals</h3><p>Salmon cakes with lemony yogurt dip. Banana egg pancakes. Cumin lamb meatballs. Dozens of named dishes, each with how to serve it, and new foods flagged.</p></div>
+      <div class="card"><h3>Your kitchen, in your pocket</h3><p>Save your batch recipes (or start from 60+ included ones), mark what's in the fridge, and get meals built around what's ready.</p></div>
+      <div class="card"><h3>Share with your partner</h3><p>Invite a partner, grandparent or nanny through iCloud. Everyone logs in the same place, and it works for more than one kid.</p></div>
+    </div>
+  </div>
+</section>
 
-<h2>Adding foods your baby already ate</h2>
-<p>Use <b>Foods → Already tried</b> (the checklist button at the top) or <b>Settings → Foods tried before the app</b>. Allergens marked there count as introduced.</p>
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>A peek inside</h2>
+    <p class="sub">Swipe through the main screens.</p>
+    <div class="shots">
+      <figure><img src="img/1-today.jpg" alt="Today screen" loading="lazy"><figcaption>Today</figcaption></figure>
+      <figure><img src="img/2-ideas.jpg" alt="Meal ideas" loading="lazy"><figcaption>Meal ideas</figcaption></figure>
+      <figure><img src="img/3-meal.jpg" alt="A meal idea with how to serve it" loading="lazy"><figcaption>A meal idea</figcaption></figure>
+      <figure><img src="img/4-allergens.jpg" alt="Allergen schedule" loading="lazy"><figcaption>Allergen schedule</figcaption></figure>
+      <figure><img src="img/5-kitchen.jpg" alt="Kitchen with batch recipes" loading="lazy"><figcaption>Your kitchen</figcaption></figure>
+      <figure><img src="img/6-foods.jpg" alt="Every food tried, with how often" loading="lazy"><figcaption>Foods tried</figcaption></figure>
+    </div>
+  </div>
+</section>
 
-<h2>Breast milk, formula or both</h2>
-<p>Each child has a <b>Drinks</b> setting in <b>Settings → Milk and nutrition</b>. It sets sensible defaults for the vitamin D reminder and the iron target, and every value can be adjusted.</p>
+<section style="padding-top:0">
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <details><summary>How much does it cost?</summary><p>It's free. No subscription and no ads.</p></details>
+    <details><summary>Is it iPhone only?</summary><p>For now, yes. It works on iPhones running iOS 17 or later.</p></details>
+    <details><summary>Does it work for baby-led weaning and purées?</summary><p>Both. Meal ideas are tagged for finger foods, and spoon foods are in there too.</p></details>
+    <details><summary>What happens to my data?</summary><p>It stays on your phone and in your own iCloud, shared only with people you invite. No accounts, no tracking, nothing sent to us. <a href="privacy.html">Privacy policy</a>.</p></details>
+    <details><summary>Is this medical advice?</summary><p>No. It's a tracking and planning helper based on published feeding guidance. Your pediatrician knows your baby best, especially around allergies, iron and supplements.</p></details>
+  </div>
+</section>
 
-<h2>Deleting your data</h2>
-<p>Go to <b>Settings → Your data</b> to delete one child or everything you created. This removes it from your iPhone and from iCloud.</p>
+<section class="signup">
+  <div class="wrap">
+    <h2>Want it when it's out?</h2>
+    <p class="sub" style="margin:0 auto 24px">It's with Apple for review right now. Send a quick email and I'll let you know the day it's live.</p>
+    <a class="btn store" href="mailto:app.firstbites@gmail.com?subject=Tell%20me%20when%20First%20Bites%20is%20live">Email me when it's out</a>
+  </div>
+</section>
 
-<h2>Medical note</h2>
-<p class="muted">First Bites offers general information, not medical advice. Targets and suggestions are based on published guidance and may not suit every child. Talk with your pediatrician about your baby's needs, especially around allergies, iron and supplements. If your baby has trouble breathing, swelling of the face or lips, or widespread hives after eating, call 911.</p>
-</main></body></html>
+<footer>
+  <div class="wrap">
+    <span>© 2026 First Bites</span>
+    <span><a href="support.html">Help &amp; support</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:app.firstbites@gmail.com">app.firstbites@gmail.com</a></span>
+  </div>
+</footer>
+
+<script>
+// When the App Store link exists, paste it between the quotes and the top button switches over.
+const APP_STORE_URL = "";
+if (APP_STORE_URL) {
+  for (const a of document.querySelectorAll('.btn.store[aria-disabled]')) {
+    a.href = APP_STORE_URL; a.textContent = "Download on the App Store"; a.removeAttribute('aria-disabled');
+  }
+}
+</script>
+</body>
+</html>
