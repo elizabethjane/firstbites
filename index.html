@@ -69,8 +69,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
       <h1>Starting solids, without the spreadsheet.</h1>
       <p class="lede">A free iPhone app that keeps track of what your baby's eaten, which allergens are next, and roughly how much iron they got today. It also gives you actual meal ideas when you're out of them.</p>
       <div class="cta">
-        <a class="btn store" aria-disabled="true">Coming soon to the App Store</a>
-        <a class="btn ghost" href="mailto:app.firstbites@gmail.com?subject=Tell%20me%20when%20First%20Bites%20is%20live">Email me when it's out</a>
+        <a class="btn store" href="https://apps.apple.com/us/app/first-bites-baby-led-weaning/id6825008576">Download on the App Store</a>
+        <a class="btn ghost" href="mailto:app.firstbites@gmail.com">Questions? Email me</a>
       </div>
     </div>
     <img class="phone" src="img/1-today.jpg" alt="The Today screen in First Bites, showing breakfast logged and lunch ideas">
@@ -147,9 +147,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 
 <section class="signup">
   <div class="wrap">
-    <h2>Want it when it's out?</h2>
-    <p class="sub" style="margin:0 auto 24px">It's with Apple for review right now. Send a quick email and I'll let you know the day it's live.</p>
-    <a class="btn store" href="mailto:app.firstbites@gmail.com?subject=Tell%20me%20when%20First%20Bites%20is%20live">Email me when it's out</a>
+    <h2>Ready to try it?</h2>
+    <p class="sub" style="margin:0 auto 24px">It's free on the App Store for iPhone.</p>
+    <a class="btn store" href="https://apps.apple.com/us/app/first-bites-baby-led-weaning/id6825008576">Download on the App Store</a>
   </div>
 </section>
 
@@ -162,7 +162,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-betw
 
 <script>
 // When the App Store link exists, paste it between the quotes and the top button switches over.
-const APP_STORE_URL = "";
+const APP_STORE_URL = "https://apps.apple.com/us/app/first-bites-baby-led-weaning/id6825008576";
 if (APP_STORE_URL) {
   for (const a of document.querySelectorAll('.btn.store[aria-disabled]')) {
     a.href = APP_STORE_URL; a.textContent = "Download on the App Store"; a.removeAttribute('aria-disabled');
